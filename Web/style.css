@@ -1,7 +1,5 @@
 div {
-    margin: auto;
-    font-size: 20px;
-    text-align: center;
+	text-align:center;
 	}
     div#bandeau {
         width:600px;
@@ -12,9 +10,17 @@ div {
         width:600px;
         height:400px;
         background-color:#FFCC00;
+        float:left;
         }
     div#piedpage {
         width:600px;
         height:50px;
         background-color:#33FF99;
+        clear:both;
         }
+        div#menu {
+            float:left;
+            width:100px;
+            height:400px;
+            background-color:#FF6699;
+            }
