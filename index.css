@@ -1,0 +1,33 @@
+div {
+    margin: auto;
+    font-size: 50px;
+    text-align: center;
+	}
+    body{
+        background-color: blueviolet;
+    }
+.div5{
+    margin: auto;
+    font-size: 80px;
+    text-align: center; 
+}
+.div6{
+    margin: auto;
+    font-size: 60px;
+    text-align: center; 
+}
+.div7{
+    margin: auto;
+    font-size: 50px;
+    text-align: center; 
+}
+.div8{
+    margin: auto;
+    font-size: 40px;
+    text-align: center; 
+}
+.div9{
+    margin: auto;
+    font-size: 30px;
+    text-align: center; 
+}
