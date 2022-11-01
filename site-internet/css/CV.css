@@ -1,0 +1,222 @@
+.zoom{
+    margin:0px 153px 0px;
+    width:120px;
+    height:100px;
+  }
+
+
+
+.div123{
+    
+       
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+  
+    
+}
+
+body {
+  background-color: gainsboro;
+  
+  
+  
+    
+}
+
+*{
+     font-family: Georgia, serif;
+}
+
+div{
+    text-align:center;
+    }
+
+    .bandeau {
+        width:850px;
+        height:27px;
+        background-color: rgb(255, 255, 255);
+        }
+
+    .bandeau2 {
+        width:850px;
+        height:60px;
+        background-color: orange;      
+        }
+
+    .bandeau3 {
+        width:850px;
+        height:25px;
+        background-color: rgb(255, 255, 255);
+        }
+
+    .menu1 {
+        float:left;
+        width:400px;
+        height:910px;
+        background-color: dimgray;
+        }
+
+    .menu2 {
+        float:right;
+        width:450px;
+        height:995px;
+        background-color:#ffffff;
+        }
+
+    #piedpage {
+        width:850px;
+        height:50px;
+        background-color: rgb(255, 255, 255);
+        clear:both;
+                }
+
+    p {
+        text-align:left;
+        font-size: 0.75rem;
+        font-family: sans-serif;
+        margin: 10px 60px 10px;
+        color: gainsboro;
+        }
+
+    h1{
+        text-align:left;
+        font-size: 2rem;
+        font-family: sans-serif;
+        margin: 30px 50px 5px;
+        color: white
+                }
+
+    .p1 {
+        text-align:left;
+        font-size: 0.75rem;
+        font-family: sans-serif;
+        margin: 0px 60px ;
+        color: gainsboro;
+        }
+
+    h2 {
+        text-align:left;
+        font-size: 0.8rem;
+        font-family: sans-serif;
+        margin: 0;
+        color: black;
+        }
+   
+                    
+    h3 {
+        text-align:left;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        margin: 20px 60px 5px;
+        color: orange;
+        }
+
+    .p2{
+        text-align:left;
+        font-size: 0.8rem;
+        font-family: sans-serif;
+        margin: 15px 60px 15px;
+        color: gainsboro;                 
+        }
+
+    h4{
+        text-align:left;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        margin: 30px 50px 26px;
+        color: black;
+        }
+
+    h5{
+        text-align:left;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        margin: 20px 50px 0px;
+        color: black;
+        }
+
+    .square {
+        height: 240px;
+        width: 260px;
+        border-color: orange;
+        border-image: none;
+        border-radius: 0 0 0 0;
+        border-style: solid;
+        border-width: 3.5px;
+        margin: auto; 
+          }
+
+    img {
+        height: 100%;
+        width: 100%;
+      }
+
+    .ligne_horizontalv2 { 
+         content: ""; 
+         flex: 1 1; 
+         border-bottom: 2px solid rgb(0, 0, 0); 
+         margin: 0px 50px 0px;
+         }
+
+    .p3 {
+        text-align:left;
+        font-size: 1rem;
+        font-family: sans-serif;
+        margin: 20px 50px 10px;
+        color: gray;
+        }
+
+    .p4 {
+        text-align:left;
+        font-size: 1rem;
+        font-family: sans-serif;
+        margin: 20px 50px 0px;
+        color: rgb(0, 0, 0);
+        }
+        .p4bis{
+            text-align:left;
+            font-size: 1rem;
+            font-family: sans-serif;
+            margin: 0px 50px 0px;
+            color: rgb(0, 0, 0);
+            }
+    
+
+    .p5 {
+        text-align:left;
+        font-size: 1rem;
+        font-family: sans-serif;
+        margin: 10px 50px 10px;
+        color: gray;
+        }
+        .p6 {
+            text-align:left;
+            font-size: 0.75rem;
+            font-family: sans-serif;
+            margin: 60px 60px 0px;
+            color: gainsboro;
+            }
+    .p7 {
+                text-align:left;
+                font-size: 0.75rem;
+                font-family: sans-serif;
+                margin: 0px 60px 40px;
+                color: gainsboro;
+                }
+.marge{
+    margin:0px 53px 0px;
+}
+.marge2{
+    margin:0px 60px 0px;
+}
+.marge3{
+    margin:50px 50px 50px;
+}
+.ligne_horizontalv3 { 
+    content: ""; 
+    flex: 1 1; 
+    border-bottom: 2px solid rgb(0, 0, 0); 
+    margin: 125px 50px 0px;
+    }
