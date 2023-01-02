@@ -1,0 +1,60 @@
+<?php
+session_start();
+if (isset($_POST["connexion"])) {
+if(isset($_POST['username'], $_POST['password'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];}
+    if($username === 'Julien' && $password === '1234'){ 
+    $_SESSION['username'] = 'Julien';
+    $_SESSION['password'] = '1234';
+    echo "connexion réussi";
+    }
+    elseif ($_POST["username"] != "Julien") {
+        echo "<p>L'username est incorrect.</p>";
+    }
+    elseif ($_POST["password"] != "1234")
+    {   
+        echo "<p>Le password est incorrect.</p>";
+    }   
+    elseif (isset($_POST["deconnecter"])) {
+    session_unset(); //Pour supprimer les variables
+    session_destroy(); //Supprimer la session
+    }
+}
+    ?>
+    
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+<div>
+<p>Login<p>
+<form action="" method="post">
+  <p>
+    <label for="username">Entrer votre username :</label>
+    <input type="text" name="username" id="username" />
+  </p>
+  <p>
+    <label for="password">Entrer votre password :</label>
+    <input type="text" name="password" id="password" />
+  </p>
+  <p>
+    <label for="connexion"></label>
+    <input type="submit" name="connexion" id="connexion" value="connexion" />
+  </p>
+  <p>
+    <label for="deconnecter"></label>
+    <input type="submit" name="deconnecter" value="deconnecter">
+  </p>
+</form>
+</div>
+</body>
+</html>
