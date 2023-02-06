@@ -9,12 +9,11 @@
     <script src='main.js'></script>
 </head>
 <body>
-<?php 
 
 
 
-try {
-
+<?php
+try { 
     $ipserver ="192.168.64.115";
     $nomBase = "VoteFilm";
     $loginPrivilege ="SiteWeb";
@@ -22,13 +21,26 @@ try {
 
     $GLOBALS["pdo"] = new PDO('mysql:host=' . $ipserver . ';dbname=' . $nomBase . '', $loginPrivilege, $passPrivilege);
 
+?>
+
+$req= "SELECT * FROM `Vote` ORDER BY 
+
+
+<?php 
+
+
     if (isset($_POST["Valider"])) {
     echo "idFilm = ".$_POST["idFilm"]." idUser = ".$Post["idUser"]." DATE = ".$_POST["DATE"];
     }
-    $requete = "INSERT INTO `Vote` (`idFilm`,`idUser`, `DATE`) VALUES ('".$_POST["idFilm"]."','3','".$_POST["DATE"]."')";
+
+    $requete = "INSERT INTO `Vote` (`idFilm`,`idUser`, `DATE`) VALUES ('".$_POST["idFilm"]."','2','".$_POST["DATE"]."')";
+    if (isset($_POST["Delete"])) {
+            $requete = "DELETE FROM `Vote` WHERE `Vote`.`idFilm` = 1 && `idUser` = 2";
+    }
     //.$_POST["idUser"].
     //`idUser`
-    //YOUPI
+    //DELETE FROM `Vote` WHERE `Vote`.`id` = 23
+    
     $resultat = $GLOBALS["pdo"]->query($requete);
 
     $requeteFilm = "select * from Film";
@@ -41,8 +53,16 @@ try {
     //resultat est du coup un objet de type PDOStatement
     //$tabUser = $resultat->fetchALL();
 
+    session_start();
+    if(isset($_POST['Valider'])){
+      if(!isset($_SESSION['click_count'])){
+        $_SESSION['click_count'] = 1;
+      } else {
+        $_SESSION['click_count']++;
+      }
+      echo "Nombre de clics : ".$_SESSION['click_count'];
+    }
     
-
     ?>
      <form action="" method="post">
         <select name="idFilm">
@@ -56,6 +76,8 @@ try {
         </select>
         <input type="datetime-local" name="DATE">
         <input type="submit" value="Voter" name="Valider">
+        <input type="submit" value="Delete" name="Delete">
+        <img src="https://fr.web.img2.acsta.net/c_310_420/pictures/22/08/25/09/04/2146702.jpg"alt="Logo HubSpot" width=10% height=10%/>
     </form>
 <?php
 } catch (Exception  $error) {
@@ -67,3 +89,5 @@ try {
 ?> 
 </body>
 </html>
+
+
