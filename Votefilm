@@ -27,7 +27,7 @@ $req= "SELECT * FROM `Vote` ORDER BY
 
 
 <?php 
-
+echo "SELECT * FROM `Vote` WHERE idFilm = 1";
 
     if (isset($_POST["Valider"])) {
     echo "idFilm = ".$_POST["idFilm"]." idUser = ".$Post["idUser"]." DATE = ".$_POST["DATE"];
@@ -79,6 +79,29 @@ $req= "SELECT * FROM `Vote` ORDER BY
         <input type="submit" value="Delete" name="Delete">
         <img src="https://fr.web.img2.acsta.net/c_310_420/pictures/22/08/25/09/04/2146702.jpg"alt="Logo HubSpot" width=10% height=10%/>
     </form>
+    <?php
+        $req = " SELECT * FROM Medecin ORDER BY id DESC ";
+        $RequeteStatement = $BasePDO -> requête ( $req );
+        if ( $RequeteStatement ){
+            ?>
+            <table border=' 1 '>
+                <?php
+                while ( $Tab = $RequeteStatement -> chercher ()){
+                    ?>
+                        <tr>
+                            < td > < a  href =" update.php?IdUpdate= <?php  echo  $Tab [" id "] ?> " > <?php  echo  $Tab [" id "] ?> </ a > </ td >
+                            < td > <?php  echo  $Tab [" nom "] ?> </ td >
+                            < td > <?php  echo  $Tab [" prenom "] ?> </ td >
+                            < td > < a  href =" delete.php?IdDelete= <?php  echo  $Tab [" id "] ?> " > X </ a > </ td >
+                        </ tr >
+                    <?php
+                }
+                ?>
+            </table>
+            <?php
+        }
+        ?>
+    
 <?php
 } catch (Exception  $error) {
     echo "error est : ".$error->getMessage();
